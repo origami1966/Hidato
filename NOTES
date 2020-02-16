@@ -1,0 +1,57 @@
+== INPUT BOARD ==
+- the board definition consists of three kinds of elements:
+  - a decimal number indicating the number of rows in the gameboard
+  - a decimal number indicating the number of columns in the gameboard
+  - all the elments of the gameboard, which include:
+    - decimal numbers indicating the proper number for the cell,
+      optionally followed by a '+' to indicate that this number is
+      a starting hint for the puzzle
+    - strings of '.'s to indicate cells that should not be printed or
+      considered in printing at all
+    - strings of 'X's to indicate cells that should be printed as
+      black space
+
+The elements are arranged with the row and column counts first, then the
+elements row by row.  Whitespace will be used as delimiters, so the board
+can be specified as one long string or with newlines to appear as the final
+board would.
+
+== CALLING IT ==
+The main program can be called in a number of ways:
+
+	hidato.py
+		will output a 6x6 hidato puzzle and solution, both in
+		single-line format
+
+	hidato.py -r 8 -c 5
+		will output a hidato puzzle with 8 rows and 5 columns,
+		both in single-line format
+
+	hidato.py -F <name>
+		will open the file <name>, presumably containing a
+		hidato puzzle to solve, and will output the puzzle and
+		solution in single-line format
+
+	hidato.py -F <name> -d <1-5>
+		will open the file <name>, presumably containing a
+		hidato puzzle to solve, and will output the puzzle and
+		solution (reached only using techniques appropriate for
+		the requested difficulty level) in single-line format
+
+	hidato.py -P <name>
+		will open the file <name>, presumably containing a
+		hidato board pattern to fill, and will output a new
+		puzzle and its solution in single-line format
+
+	hidato.py -P <name> -d <1-5>
+		will open the file <name>, presumably containing a
+		hidato board pattern to fill, and will output a new
+		puzzle of the requested difficulty (1 being easiest,
+		5 being hardest) and its solution in single-line format
+
+So, the usage message will probably look like this:
+
+USAGE:
+        hidato [-D <severity>] [-r <row#> -c <column#>] [-d <1-5>]
+		hidato [-D <severity>] -F <filename> [-d <1-5>]
+		hidato [-D <severity>] -P <filename> [-d <1-5>]

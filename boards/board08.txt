@@ -1,0 +1,9 @@
+8 8
+02+ 01+ ... ... ... XXX XXX XXX
+... ... 05+ 06+ ... XXX XXX XXX
+... 30+ ... ... ... 11+ XXX XXX
+... 26+ ... 13+ ... 20+ XXX XXX
+... ... ... ... 16+ ... ... XXX
+XXX XXX 24+ ... 22+ ... 18+ XXX
+XXX XXX XXX XXX ... 36+ ... 38+
+XXX XXX XXX XXX XXX XXX 40+ ...
